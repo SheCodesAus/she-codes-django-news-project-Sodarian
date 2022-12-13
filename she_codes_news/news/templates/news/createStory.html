@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    <h2>Write New Story</h2>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="submit">
+</form>
+{%else%}
+
+<a href="{% url 'users:createAccount' %}">Create Account</a>
+{%endif%}
+
+{% endblock %}
+
