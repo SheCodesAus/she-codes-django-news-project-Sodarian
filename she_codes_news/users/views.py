@@ -17,5 +17,10 @@ class AccountView(generic.DetailView):
     model = CustomUser
     template_name = "users/account.html"
     context_object_name = "user"
-    context_object_name = "news_newsStory" 
+     # context_object_name = "news_newsStory" 
+
+    def get_object(self):
+        return self.request.user
+   
+
      

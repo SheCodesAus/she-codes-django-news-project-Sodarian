@@ -1,12 +1,8 @@
-{% comment %} <img src="{{ story.image}}"></img> {% endcomment %}
+{% load static %}
 
 <div class="story-card" id="story-card-{{ position }}">
     <a href="{% url 'news:story' story.id %}">
-        {% comment %} {% if position < 5 %} 
-            <img src="../static/news/images/placeholder-{{ position }}.jpg">
-        {% else %}
-            <img src="https://picsum.photos/600">
-        {% endif %}  {% endcomment %}
+
         <img src="{{ story.image}}">
         <div class="story-card-text">
             

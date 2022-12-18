@@ -10,5 +10,11 @@
 
 </div>
 
+<div>
+    {% for story in user.newsstory_set.all %}
+        
+        {% include "news/storyCard.html" with story=story%}
+    {% endfor %}
+</div>
 
 {% endblock %}
